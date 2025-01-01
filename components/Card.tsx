@@ -7,14 +7,14 @@ const Card = () => {
   const [expand, setExpand] = useState(false);
   return (
     <>
-      <div className="py-5 flex flex-col gap-3">
-        <h1 className="px-5">M27: The Dumbbell Nebula</h1>
-        <div style={{ position: "relative", width: "100%", height: "500px" }}>
+      <div className="py-5 flex flex-col gap-3 sm:bg-gray-800 w-full sm:w-[32rem] md:w-[40rem] rounded-sm sm:border-2 border-gray-700 border-solid">
+        <h1 className="px-5 text-sm text-white">M27: The Dumbbell Nebula</h1>
+        <div className="relative w-full h-[500px] sm:h-[600px] md:h-[660px]">
           <Image
             src="/M27_Stobie_960.jpg"
-            layout="fill"
-            objectFit="cover"
+            fill
             alt="image"
+            className="object-cover"
           />
         </div>
         <div className="px-5 flex flex-col gap-3">
@@ -48,7 +48,7 @@ const Card = () => {
                 expand ? "flex-col gap-3 items-start" : "items-center"
               }`}
             >
-              <p className={`${!expand ? "truncate" : ""}`}>
+              <p className={`${!expand ? "truncate" : ""} max-w-xl`}>
                 Is this what will become of our Sun? Quite possibly. The first
                 hint of our Sun&apos;s future was discovered inadvertently in
                 1764. At that time, Charles Messier was compiling a list of
