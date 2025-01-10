@@ -1,6 +1,6 @@
 "use client";
 
-import { Compass, Sun, Moon, Github } from "lucide-react";
+import { Sun, Moon, Github } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState, useEffect } from "react";
