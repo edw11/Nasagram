@@ -17,6 +17,7 @@ type data = {
 const CardDetail = (data: data) => {
   const [expand, setExpand] = useState(false);
   const [click, setClick] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <>
@@ -32,9 +33,16 @@ const CardDetail = (data: data) => {
         )}
 
         <div className="relative w-full h-[500px] sm:h-[600px] md:h-[660px]">
-          {data.hdurl ? (
-            <Image src={data.url} fill alt="image" className="object-cover" />
-          ) : (
+          <Image
+            src={data.url}
+            fill
+            alt="image"
+            onLoad={() => {
+              setLoaded(true);
+            }}
+            className={`object-cover ${!loaded ? "opacity-0" : "opacity-100"}`}
+          />
+          {!loaded && (
             <div className="flex w-full h-full justify-center ">
               <Skeleton className="relative w-full h-full rounded-none" />
             </div>
