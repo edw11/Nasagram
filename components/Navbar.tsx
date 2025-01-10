@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full z-10">
-      <div className="px-5 py-3 bg-gray-800 text-white flex justify-center">
+      <div className="px-5 py-3 dark:bg-gray-800 bg-white dark:border-none border-b-2 border-solid border-gray-300 dark:text-white text-black flex justify-center">
         <div className="flex justify-between items-center w-[55rem]">
           <p className="font-title text-3xl lg:text-4xl">Nasagram</p>
           <div className="flex gap-5 md:gap-6">

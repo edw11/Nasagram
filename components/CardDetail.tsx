@@ -20,7 +20,7 @@ const CardDetail = (data: data) => {
 
   return (
     <>
-      <div className="py-5 flex flex-col gap-3 sm:bg-gray-800 w-full sm:w-[32rem] md:w-[40rem] rounded-sm sm:border-2 border-gray-700 border-solid">
+      <div className="py-5 flex flex-col gap-3 sm:dark:bg-gray-800 sm:bg-none w-full sm:w-[32rem] md:w-[42rem] h-full rounded-sm sm:border-2 dark:sm:border-none shadow-xl border-gray-300 border-solid">
         {data.title ? (
           <h1 className="px-5 text-sm text-black dark:text-white md:text-lg">
             {data.title}
@@ -45,15 +45,20 @@ const CardDetail = (data: data) => {
             <div className="flex gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                width={20}
-                height={20}
+                viewBox="0 0 520 540"
+                width={25}
+                height={25}
                 onClick={() => {
                   setClick(!click);
                 }}
                 className={`${
                   click ? "fill-red-500" : "fill-white "
-                } transition-all cursor-pointer`}
+                } transition-all cursor-pointer stroke-gray-400`}
+                stroke="black" // Border color
+                strokeWidth="20" // Border thickness
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
               >
                 <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
               </svg>
@@ -85,13 +90,13 @@ const CardDetail = (data: data) => {
                   onClick={() => {
                     setExpand(!expand);
                   }}
-                  className="md:text-lg text-gray-500"
+                  className="md:text-lg text-gray-400"
                 >
                   {!expand ? <p>More</p> : <p>Close</p>}
                 </button>
               </div>
 
-              <p className="text-xs">{data.date}</p>
+              <p className="text-sm dark:text-white text-black">{data.date}</p>
             </div>
           </div>
         ) : (
