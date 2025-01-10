@@ -4,10 +4,10 @@ import { Skeleton } from "./ui/skeleton";
 import Image from "next/image";
 
 type data = {
-  copyright?: string;
+  copyright: string;
   date: string;
   explanation: string;
-  hdurl?: string;
+  hdurl: string;
   media_type: string;
   service_version: string;
   title: string;
@@ -85,7 +85,7 @@ const CardDetail = (data: data) => {
                 </button>
               </div>
 
-              <p className="text-xs">December 30, 2024</p>
+              <p className="text-xs">{data.date}</p>
             </div>
           </div>
         ) : (
