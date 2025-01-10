@@ -20,17 +20,17 @@ const Navbar = () => {
     <div className="fixed w-full z-10">
       <div className="px-5 py-3 bg-gray-800 text-white flex justify-center">
         <div className="flex justify-between items-center w-[55rem]">
-          <p className="font-title text-3xl">Nasagram</p>
+          <p className="font-title text-3xl lg:text-4xl">Nasagram</p>
           <div className="flex gap-5 md:gap-6">
             {resolvedTheme === "dark" ? (
               <Sun
-                size={22}
+                size={27}
                 onClick={() => setTheme("light")}
                 className="cursor-pointer"
               />
             ) : (
               <Moon
-                size={22}
+                size={27}
                 onClick={() => setTheme("dark")}
                 className="cursor-pointer"
               />
@@ -42,7 +42,7 @@ const Navbar = () => {
             >
               <Github
                 color="currentColor"
-                size={22}
+                size={27}
                 className="cursor-pointer"
               />
             </Link>
