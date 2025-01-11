@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nasagram",
-  description: "Small gallery for space photos",
+  description: "Small gallery for Nasa's photos",
 };
 
 export default function RootLayout({
